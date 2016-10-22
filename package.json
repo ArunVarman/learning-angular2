@@ -1,0 +1,22 @@
+{
+  "name": "chapter_01",
+  "version": "1.0.0",
+  "description": "Chapter 1 - Creating our first component in Angular 2",
+  "main": "pomodoro-timer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArunVarman/learning-angular2.git"
+  },
+  "keywords": [
+    "[]"
+  ],
+  "author": "Arun Rajagopalan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ArunVarman/learning-angular2/issues"
+  },
+  "homepage": "https://github.com/ArunVarman/learning-angular2#readme"
+}
