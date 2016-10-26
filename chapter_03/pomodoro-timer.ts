@@ -1,58 +1,31 @@
 import { Component } from '@angular/core';
 import { bootstrap } from '@angular/platform-browser-dynamic';
 
-@Component({
-  selector: 'pomodoro-timer',
-  template: `
-    <div class="text-center">
-      <img src="assets/img/pomodoro.png" alt="Pomodoro">
-      <h1> {{ minutes }}:{{ seconds | number: '2.0' }} </h1>
-      <p>
-        <button (click)="togglePause()"
-          class="btn btn-danger">
-          {{ buttonLabel }}
-        </button>
-      </p>
-    </div>
-`
+@Component ({
+  selector: 'countdown',
+  template: '<h1>Time Left: {{seconds}}</h1>'
 })
-class PomodoroTimerComponent {
-  minutes: number;
-  seconds: number;
-  isPaused: boolean;
-  buttonLabel: string;
+class CountdownComponent {
+  seconds: number = 25;
+  intervalId: number;
 
-  constructor() {
-    this.resetPomodoro();
-    setInterval(() => this.tick(), 1000);
-  }
-
-  resetPomodoro(): void {
-    this.isPaused = true;
-    this.minutes = 24;
-    this.seconds = 59;
-    this.buttonLabel = 'Start';
+  constructor(){
+    this.intervalId = setInterval(() => this.tick(), 1000);
   }
 
   private tick(): void {
-    if (!this.isPaused) {
-      this.buttonLabel = 'Pause';
-
-      if (--this.seconds < 0) {
-        this.seconds = 59;
-        if (--this.minutes < 0) {
-          this.resetPomodoro();
-        }
-      }
-    }
-  }
-
-  togglePause(): void {
-    this.isPaused = !this.isPaused;
-    if (this.minutes < 24 || this.seconds < 59) {
-      this.buttonLabel = this.isPaused ? 'Resume' : 'Pause';
+    //Implement function
+    if(--this.intervalId < 1) {
+      clearInterval(this.intervalId);
     }
   }
 }
+
+@Component ({
+  selector: 'pomodoro-timer',
+  directives: [CountdownComponent],
+  template: '<countdown></countdown>'
+})
+class PomodoroTimerComponent {}
 
 bootstrap(PomodoroTimerComponent);
