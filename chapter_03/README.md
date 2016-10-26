@@ -1,29 +1,28 @@
-# Chapter 1
-## Creating our first component in Angular 2
+# Chapter 3
+## Enhancing our component interactivity and layout
 
-We kickstart our journey into Angular by building our very first component, which is the bread and butter of all Angular 2 applications. Angular 2 components conform the bricks of all web applications and by the end of this chapter we will have a fully functional web widget harnessing the power of Angular.
+Now that we’re familiar with the basic form and shape of an Angular component and the syntax that helps define it, we can go a step further and make them more expressive by means of property and event binding. For doing so we will take a comprehensive look on the Angular 2 template syntax, the component input and output endpoints and how data and behaviors are handled between the template and the component class.
 
 ## Installation
 
 Clone the repository, move to the folder containing the source file for this chapter and install the NPM dependencies by executing the following:
 
-```javascript
+```bash
 $ git clone https://github.com/deeleman/learning-angular2.git
-$ cd learning-angular2/chapter_01
+$ cd learning-angular2/chapter_03
 $ npm install
 ```
 
-An `npm postinstall` hook will manage the installation of the typings required for compiling the project. You can run `npm start` once finished to trigger the TypeScript transpiling and spawn a local server in your machine already pointing to the chapter folder.
+An `npm postinstall` hook will manage the installation of the typings required for compiling the project. You can run `npm start` once finished to trigger the TypeScript transpiling and fire a local server in your machine already pointing to the chapter folder.
 
 ## Topics covered
 
-This chapter exposes the user to the code paradigm of Angular components, based on ES6 classes decorated with annotations. Prior to that we will guide the user through the vast ocean of tooling available for working on TypeScript-baed projects.
+We will go through the process of building complex templates, either inline or wrapped in views files. For doing so we will create a new component from scratch and build up on top of it. Then we will review how property binding is handled compared to the traditional JavaScript attribute value bindings. We will slightly overview event binding as well with short real examples of interactive behaviors.
 
 ## Skills learned
 
-* How to setup a workspace with support for Angular 2 and TypeScript.
-* Leverage automated build tools like Gulp to help accomplish the above.
-* Enhance our IDE of choice (Sublime, Atom, [https://code.visualstudio.com/](Visual Studio Code)) with TypeScript code visual helpers.
-* Build our very first Angular 2 component and render it on an HTML page.
-* Format our component output with pipes.
-* Bootstrap our newly created component.
+* Template syntax.
+* Property binding.
+* Event binding.
+* Built-in pipes.
+* Built-in directives.
